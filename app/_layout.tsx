@@ -1,12 +1,27 @@
 import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 export default function RootLayout() {
-  return <Stack>
-  <Stack.Screen name="index"
-  options = {{headerTitle: "Página inicial",
-  headerLeft: () => <></>}}/>
-  <Stack.Screen name="about" 
-  options = {{headerTitle: "Sobre"}}/>
-  <Stack.Screen name = "not-found"/>
-  </Stack>
+  return (
+  <>
+    <StatusBar style="light"/>
+    <Stack screenOptions={{
+    headerShadowVisible:false,
+    headerTintColor:'#fff',
+    headerStyle:{
+        backgroundColor:'#214067'
+    },
+   
+    }}>
+    <Stack.Screen name="(tabs)"
+    options = {{
+      headerShown: false,
+    }}
+    
+    />
+    
+    <Stack.Screen name = "not-found"/>
+    </Stack>
+  </>
+  )
 }

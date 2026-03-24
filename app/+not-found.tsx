@@ -1,14 +1,17 @@
-import { Link } from "expo-router";
+import { Link, Stack } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function NotFoundScreen() {
   return (
-    <View style= {styles.container}>
-      <Text style ={styles.text}>Página não encontrada!</Text>
-      <Link href={"/"} style = {styles.link}>
-        Retornar para página inicial
-      </Link>
-    </View>
+    <>
+    <Stack.Screen options={{title: "Opa! Página não encontrada!"}}/>
+      <View style= {styles.container}>
+        <Text style ={styles.text}>Página não encontrada!</Text>
+        <Link href={"/"} style = {styles.link}>
+          Retornar para página inicial
+        </Link>
+      </View>
+  </>
   );
 }
 
