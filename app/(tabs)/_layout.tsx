@@ -18,6 +18,11 @@ export default function TabsLayout() {
   color = {color}
   size={24}/>),  
   headerLeft: () => <></>}}/>
+  <Tabs.Screen name="local-to-do" 
+  options = {{headerTitle: "Tarefas Local", tabBarIcon:({focused,color})=> 
+    (<Ionicons name = {focused? 'checkmark-circle': 'checkmark-circle-outline'}
+    color = {color}
+    size={24}/>)}}/>
   <Tabs.Screen name="about" 
   options = {{headerTitle: "Sobre", tabBarIcon:({focused,color})=> (<Ionicons name = {focused? 'information-circle': 'information-circle-outline'}
   color = {color}
